@@ -3,6 +3,8 @@
 Doing this for java revision (trying to learn it basically off by heart by doing some of the basics).
 I followed a tutorial for the first part but then added my own flare (TUTORIAL AT THE BOTTOM OF README).
 
+
+
 # Tools / Languages
 Used OpenWeather API, HTML, CSS, JS, Gify.
 
