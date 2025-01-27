@@ -102,3 +102,22 @@ body {
 .weather {
     display: none;
 }
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.time-icon {
+    border: 0;
+    outline: 0;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.local-time {
+    font-size: 24px;
+    color: #fff;
+}
