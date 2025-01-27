@@ -121,3 +121,25 @@ body {
     font-size: 24px;
     color: #fff;
 }
+
+.view-more {
+    background: #ebfffc;
+    color: #555;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.more-details {
+    margin-top: 20px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.more-details p {
+    font-size: 18px;
+    margin: 5px 0;
+}

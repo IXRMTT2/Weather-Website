@@ -34,6 +34,13 @@
                         </div>
                     </div>
                 </div>
+                <button class="view-more">View More Details</button>
+                <div class="more-details" style="display: none;">
+                    <p class="pressure">Pressure: --</p>
+                    <p class="visibility">Visibility: --</p>
+                    <p class="sunrise">Sunrise: --</p>
+                    <p class="sunset">Sunset: --</p>
+                </div>
             </div>
         </div>
         <script>
@@ -43,6 +50,8 @@
             const searchBox = document.querySelector(".search input");
             const searchBtn = document.querySelector(".search button");
             const weatherIcon = document.querySelector(".weatherIcon");
+            const viewMoreBtn = document.querySelector(".view-more");
+            const moreDetails = document.querySelector(".more-details");
 
             async function checkWeather(city){
                 try {
@@ -89,6 +98,15 @@
                             weatherIcon.src = "images/default.png";
                             break;
                     }
+
+                    // Update more details
+                    document.querySelector(".pressure").innerHTML = `Pressure: ${data.main.pressure} hPa`;
+                    document.querySelector(".visibility").innerHTML = `Visibility: ${data.visibility} m`;
+                    const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+                    const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+                    document.querySelector(".sunrise").innerHTML = `Sunrise: ${sunrise}`;
+                    document.querySelector(".sunset").innerHTML = `Sunset: ${sunset}`;
+
                 } catch (error) {
                     console.error(error);
                     alert('Failed to fetch weather data. Please try again.');
@@ -97,6 +115,10 @@
 
             searchBtn.addEventListener("click", () => {
                 checkWeather(searchBox.value);
+            });
+
+            viewMoreBtn.addEventListener("click", () => {
+                moreDetails.style.display = moreDetails.style.display === "none" ? "block" : "none";
             });
 
             checkWeather("New York"); // Default city
