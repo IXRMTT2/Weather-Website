@@ -9,7 +9,7 @@ https://ixrmtt2.github.io/ixrweatherwebsite.git.io/
 # Tools / Languages
 Used OpenWeather API, HTML, CSS, JS, Gify.
 
-# Additions I made
+# Additions / Changes I made
 
 - I added time
 - I added, "view more details" sections (including the icons [found on giphy]).
